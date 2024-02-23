@@ -318,7 +318,6 @@ func StartWebServer(eebusNode *eebus.EebusNode) {
 	})
 
 	http.HandleFunc("/energy-management", func(w http.ResponseWriter, r *http.Request) {
-		log.Println("ZORT111")
 
 		solarY, solarX := make([]string, 0), make([]string, 0)
 		consumptionY, consumptionX := make([]string, 0), make([]string, 0)
