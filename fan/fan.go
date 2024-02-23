@@ -23,7 +23,7 @@ func main() {
 	// What to do for leds:
 	// Connect to switches, receive SPINE on/off requests
 	initGpio()
-	eebusNode = eebus.NewEebusNode("100.90.1.102", false, "fan", "0001", "DHBW", "Fan")
+	eebusNode = eebus.NewEebusNode("localhost", false, "fan", "0001", "DHBW", "Fan")
 	buildDeviceModel(eebusNode)
 	eebusNode.Update = update
 	eebusNode.Start()

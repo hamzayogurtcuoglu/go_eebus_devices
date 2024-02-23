@@ -21,7 +21,7 @@ func main() {
 
 	// What to do for switches:
 	// Connect to LEDs, receive on/off cmd -> send to all binding partners
-	eebusNode := eebus.NewEebusNode("100.90.1.109", true, "gateway", "0001", "DHBW", "Gateway")
+	eebusNode := eebus.NewEebusNode("localhost", true, "gateway", "0001", "DHBW", "Gateway")
 	eebusNode.Update = update
 	buildDeviceModelGateway(eebusNode)
 

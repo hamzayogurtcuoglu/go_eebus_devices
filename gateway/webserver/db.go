@@ -15,7 +15,7 @@ func ConnectDb() *sql.DB {
 	// Capture connection properties.
 	cfg := mysql.Config{
 		User:                 "pi",
-		Passwd:               "",
+		Passwd:               "password",
 		Net:                  "tcp",
 		Addr:                 "localhost",
 		DBName:               "mysql",
@@ -25,25 +25,29 @@ func ConnectDb() *sql.DB {
 	var err error
 	db, err = sql.Open("mysql", cfg.FormatDSN())
 	if err != nil {
-		log.Println("No connection to database")
+		log.Println("No connection to database11")
 		return nil
 	}
 
 	pingErr := db.Ping()
 	if pingErr != nil {
-		log.Println("No connection to database")
+		log.Println("No connection to database22", pingErr)
 		return nil
 	}
 
 	_, err = db.Query("CREATE DATABASE IF NOT EXISTS " + dbName)
 	if err != nil {
+		log.Println("3333", pingErr)
+
 		log.Fatal(err)
 	}
 	cfg.DBName = dbName
+
 	db, err = sql.Open("mysql", cfg.FormatDSN())
 	if err != nil {
 		log.Fatal(err)
 	}
+	log.Println("LALE")
 
 	createTables()
 	return db

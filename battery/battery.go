@@ -16,7 +16,7 @@ import (
 )
 
 func main() {
-	eebusNode := eebus.NewEebusNode("100.90.1.109", false, "battery", "0001", "DHBW", "Battery")
+	eebusNode := eebus.NewEebusNode("localhost", false, "battery", "0001", "DHBW", "Battery")
 	buildDeviceModel(eebusNode)
 	eebusNode.Start()
 
