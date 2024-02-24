@@ -11,7 +11,7 @@ The documentation of the student research project can be found here:
 
 [GoEEBUS.pdf](https://github.com/LMF-DHBW/goeebus/blob/main/assets/GoEEBUS.pdf)
 
-The other part of the research project was the implementation EEBUS framework.
+The other part of the research project was the implementation EEBUS framework
 The GitHub repository can be found here: 
 
 [https://github.com/LMF-DHBW/go_eebus](https://github.com/LMF-DHBW/go_eebus)
